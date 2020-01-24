@@ -20,14 +20,14 @@ from keras.layers.pooling import MaxPooling2D
 
 from google.colab import drive
 # drive.mount('/content/drive')
-foldernames = os.listdir('/milfotos/')
+foldernames = os.listdir('milfotos/')
 categories = []
 files = []
 i = 0
 for k, folder in enumerate(foldernames):
-    filenames = os.listdir("/milfotos/" + folder)
+    filenames = os.listdir("milfotos/" + folder)
     for file in filenames:
-        files.append("/milfotos/" + folder + "/" + file)
+        files.append("milfotos/" + folder + "/" + file)
         categories.append(k)
         
 df = pd.DataFrame({
