@@ -1,9 +1,9 @@
 import numpy as np
 import pandas as pd
 import os
-# import cv2
+import cv2
 import matplotlib.pyplot as plt
-# from tqdm import tqdm_notebook as tqdm
+from tqdm import tqdm_notebook as tqdm
 from sklearn.utils import class_weight, shuffle
 
 from keras import applications
