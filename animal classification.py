@@ -46,14 +46,14 @@ x = train_df['filename']
 
 x, y = shuffle(x, y, random_state=8)
 images = []
-# with tqdm(total=len(train_df)) as pbar:
-#     for i, file_path in enumerate(train_df.filename.values):
-#         #read image
-#         img = cv2.imread(file_path)
-#         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-#         img = cv2.resize(img, dsize=(150,150))
-#         images.append(img)
-#         pbar.update(1)
+with tqdm(total=len(train_df)) as pbar:
+    for i, file_path in enumerate(train_df.filename.values):
+        #read image
+        img = cv2.imread(file_path)
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        img = cv2.resize(img, dsize=(150,150))
+        images.append(img)
+        pbar.update(1)
 
 images = np.array(images)
 rows,cols = 2,5
